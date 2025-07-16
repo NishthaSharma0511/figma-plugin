@@ -1,19 +1,12 @@
 {
   "name": "figma-typography-exporter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Figma plugin to export typography styles",
+  "main": "dist/code.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build"
+    "build": "vite build && cp src/ui.html dist/ui.html"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@figma/plugin-typings": "^1.115.0",
-    "@peculiar/webcrypto": "^1.5.0",
-    "typescript": "^5.8.3",
-    "vite": "^4.5.0"
+    "vite": "^4.4.9"
   }
 }

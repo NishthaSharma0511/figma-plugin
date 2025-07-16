@@ -1,0 +1,1 @@
+console.log("[UI-inline] ✅ script loaded");const t=document.getElementById("fetch"),n=document.getElementById("framework");t?.addEventListener("click",()=>{const e=n?.value||"Tailwind";console.log("[UI-inline] ▶️ Clicked"),parent.postMessage({pluginMessage:{type:"get-typography-tokens",framework:e}},"*")});
