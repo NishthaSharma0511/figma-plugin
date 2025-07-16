@@ -1,22 +1,18 @@
 import { defineConfig } from 'vite';
-import { Crypto } from '@peculiar/webcrypto';
-
-if (!globalThis.crypto) {
-  globalThis.crypto = new Crypto();
-}
 
 export default defineConfig({
   build: {
     target: 'esnext',
+    outDir: '.',  // ⬅️ Output directly to plugin root
+    emptyOutDir: false,
     rollupOptions: {
       input: {
         code: 'src/code.ts',
         ui: 'src/ui.html'
       },
       output: {
-        entryFileNames: '[name].js'
+        entryFileNames: '[name].js' // Produces `code.js`, `ui.js`
       }
-    },
-    emptyOutDir: false
+    }
   }
 });
